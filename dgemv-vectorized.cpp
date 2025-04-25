@@ -14,7 +14,7 @@ void my_dgemv(int n, double* A, double* x, double* y) {
       index = i * n;
       int sum = 0;
       for(int j = 0; j < n; j++) {
-      sum += y[i] + A[index] * x[j];
+      sum += y[i] + (A[index] * x[j]);
          index++;
          y[i] = sum;
       //    y[(i + 1)/n] = y[(i + 1)/n] + A[(i + 1)] * x[(i + 1) % n];
