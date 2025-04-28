@@ -9,11 +9,11 @@ const char* dgemv_desc = "Vectorized implementation of matrix-vector multiply.";
 void my_dgemv(int n, double* A, double* x, double* y) {
    // insert your code here: implementation of vectorized vector-matrix multiply
    for(int j = 0; j < n; j++) {
-      int sum = y[j];
+      int sum = 0;
       int index = j * n;
       for(int i = 0; i < n; i++) {
          sum += (A[index + i] * x[i]);
       }
-      y[j] = sum;
+      y[j] += sum;
    }
 }
