@@ -12,7 +12,7 @@ void my_dgemv(int n, double* A, double* x, double* y) {
       int rowOffset = (i * n);
          for(int j = 0; j < n; j++) {
             int index = rowOffset + j;
-            int product = A[index] * x[j]
+            int product = A[index] * x[j];
             y[i] += product;
          }
       }
