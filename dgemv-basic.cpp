@@ -1,3 +1,4 @@
+#include <cstdio>
 const char* dgemv_desc = "Basic implementation of matrix-vector multiply.";
 
 /*
