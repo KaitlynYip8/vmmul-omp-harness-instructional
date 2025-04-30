@@ -9,8 +9,12 @@ const char* dgemv_desc = "Basic implementation of matrix-vector multiply.";
  */
 void my_dgemv(int n, double* A, double* x, double* y) {
    // insert your code here: implementation of basic matrix multiply
+
+   // Go through each row of the matrix A
    for(int i = 0; i < n; i++) {
+      // Start at row i in the 1D array A
       int index = i * n;
+      // Multiply row i of A with vector x and add to y[i]
       for(int j = 0; j < n; j++) {
          y[i] += (A[index + j] * x[j]);
       }
